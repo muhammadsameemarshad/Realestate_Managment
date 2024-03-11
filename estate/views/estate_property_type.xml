@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="estate_property_type_form_view">
+            <field name="name">Estate Property Type Form</field>
+            <field name="model">estate.property.type</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <form string="Properties Type">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+
+
+        </record>
+        <record model="ir.ui.view" id="estate_property_type_list_view">
+            <field name="name">Estate Property Type List</field>
+            <field name="model">estate.property.type</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <tree string="Properties Type">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="estate_property_type_search_view">
+            <field name="name">Estate Property Type Search</field>
+            <field name="model">estate.property.type</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <search string="Properties Type">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="estate_property_type_action" model="ir.actions.act_window">
+            <field name="name">Estate Property Type</field>
+            <field name="res_model">estate.property.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="setting_first_menu" name="Settings" parent="real_estate_root"/>
+
+            <menuitem id="setting_second_level_menu" name="Properties Types" parent="setting_first_menu" action="estate_property_type_action"/>
+
+    </data>
+</odoo>
+

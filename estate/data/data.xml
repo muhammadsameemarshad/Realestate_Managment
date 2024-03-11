@@ -1,0 +1,9 @@
+<odoo>
+   <data>
+       <record id="any_unique_id" model="your.model">
+           <field name="name">House</field>
+           <field name="description">1</field>
+           <field name="expected_price">4500000</field>
+       </record>
+   </data>
+</odoo>
